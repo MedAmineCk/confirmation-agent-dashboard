@@ -26,7 +26,7 @@ import {
 
 export const Header = () => {
   return (
-    <header className="bg-white shadow-sm flex items-center justify-between px-4 py-3 sticky top-0">
+    <header className="bg-white shadow-sm flex items-center justify-between px-4 py-3 sticky top-0 z-50">
       <Sheet>
         <SheetTrigger asChild>
           <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800">
@@ -163,7 +163,7 @@ export const Header = () => {
             <DropdownMenuItem>
               <Link
                 className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                to="/"
+                to="/profile"
               >
                 <UserIcon className="w-5 h-5" />
                 <span>Profile</span>

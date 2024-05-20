@@ -32,9 +32,9 @@ export default function OverviewPage() {
           </div>
         </div>
         <div className="bg-white flex justify-center items-center rounded-3xl min-w-20 h-20 shadow-lg">
-          <div className="bg-blue-500 p-3 rounded-full">
+          <Link to="add-new-order" className="bg-blue-500 p-3 rounded-full">
             <PlusIcon className="w-5 h-5 text-white" />
-          </div>
+          </Link>
         </div>
       </div>
       <div className="mt-6 md:mt-8">
