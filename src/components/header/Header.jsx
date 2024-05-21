@@ -1,19 +1,14 @@
 import {
-  BarChartIcon,
   BellIcon,
   CheckIcon,
-  HomeIcon,
-  LayoutGridIcon,
+  Home,
   LogOutIcon,
-  MenuIcon,
-  Package2Icon,
   PackageIcon,
   SearchIcon,
   SettingsIcon,
   UserIcon,
   XIcon,
 } from "lucide-react";
-import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Link } from "react-router-dom";
 import { Input } from "../ui/input";
 import {
@@ -26,58 +21,13 @@ import {
 
 export const Header = () => {
   return (
-    <header className="bg-white shadow-sm flex items-center justify-between px-4 py-3 sticky top-0 z-50">
-      <Sheet>
-        <SheetTrigger asChild>
-          <button className="p-2 rounded-full bg-gray-100 dark:bg-gray-800">
-            <MenuIcon className="w-5 h-5 text-gray-500 dark:text-gray-400" />
-          </button>
-        </SheetTrigger>
-        <SheetContent
-          className="w-64 bg-white dark:bg-gray-900 shadow-lg"
-          side="left"
-        >
-          <div className="p-4 space-y-4">
-            <Link
-              className="flex items-center gap-2 text-lg font-semibold"
-              to="/"
-            >
-              <Package2Icon className="w-6 h-6" />
-              <span>Acme Inc</span>
-            </Link>
-            <nav className="space-y-2">
-              <Link
-                className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                to="/"
-              >
-                <HomeIcon className="w-5 h-5" />
-                <span>Home</span>
-              </Link>
-              <Link
-                className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                to="/"
-              >
-                <PackageIcon className="w-5 h-5" />
-                <span>Orders</span>
-              </Link>
-              <Link
-                className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                to="/"
-              >
-                <LayoutGridIcon className="w-5 h-5" />
-                <span>Products</span>
-              </Link>
-              <Link
-                className="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100"
-                to="/"
-              >
-                <BarChartIcon className="w-5 h-5" />
-                <span>Analytics</span>
-              </Link>
-            </nav>
-          </div>
-        </SheetContent>
-      </Sheet>
+    <header className="bg-white shadow-sm flex gap-4 items-center justify-between px-4 py-3 sticky top-0 z-50">
+      <Link
+        to="/"
+        className="w-5 h-5 bg-gray-100 rounded-full flex justify-center items-center"
+      >
+        <Home className="text-gray-500" />
+      </Link>
       <div className="relative flex-1 max-w-md">
         <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400" />
         <Input
