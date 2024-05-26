@@ -27,7 +27,7 @@ import { Link } from "react-router-dom";
 
 export default function AddNewOrderPage() {
   return (
-    <div className="flex flex-col pb-4">
+    <div className="flex flex-col pb-24">
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
@@ -39,7 +39,7 @@ export default function AddNewOrderPage() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <div className="flex-1 md:p-6 grid gap-6 my-4">
+      <div className="flex-1 md:p-6 grid gap-6 mt-4">
         <div className="grid gap-4 bg-white rounded-3xl p-4">
           <div className="relative">
             <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-500 dark:text-gray-400" />
@@ -158,7 +158,10 @@ export default function AddNewOrderPage() {
           </div>
         </div>
       </div>
-      <Button>Save</Button>
+      <div className="bg-gray-100 dark:bg-gray-800 px-4 py-3 flex items-center justify-end gap-2 fixed bottom-0 inset-x-0">
+        <Button variant="outline">Cancel</Button>
+        <Button>Save</Button>
+      </div>
     </div>
   );
 }
